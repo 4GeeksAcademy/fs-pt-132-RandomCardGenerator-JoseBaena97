@@ -21,18 +21,22 @@
 
 <body>
 
-  <div class="d-flex justify-content-center align-items-center vh-100">
-    <div id="card" class="card shadow-lg border-0 ">
+<div class="d-flex flex-column justify-content-center align-items-center vh-100">
+    
+    <div id="card" class="card shadow-lg border-0 mb-4">
       <div class="card-body p-0 d-flex flex-column justify-content-between">
 
         <div id="top-suit" class="suit-container ps-4 pt-1"></div>
 
         <div id="number" class="number-container text-center"></div>
 
-        <div id="bottom-suit" class="suit-container ps-4 pt-1 text-start rotated"></div>
+        <div id="bottom-suit" class="suit-container ps-4 pb-1 text-start rotated"></div>
 
       </div>
     </div>
+
+    <button id="generate-btn" class="btn btn-light btn-lg shadow-sm fw-bold px-4">Deal!</button>
+    
   </div>
 
   <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->

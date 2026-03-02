@@ -5,10 +5,9 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+const generateCard = () => {
     const suits = ["heart", "diamond", "spade", "club"];
     const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-    
     const icons = {
         heart: "♥",
         diamond: "♦",
@@ -24,6 +23,8 @@ window.onload = function() {
     const number = document.getElementById("number");
     const bottomSuit = document.getElementById("bottom-suit");
 
+    card.classList.remove("heart", "diamond", "spade", "club");
+
     card.classList.add(randomSuit);
 
     topSuit.innerHTML = icons[randomSuit];
@@ -31,4 +32,6 @@ window.onload = function() {
     number.innerHTML = randomValue;
 };
 
+window.onload = generateCard;
+document.getElementById("generate-btn").addEventListener("click", generateCard);
 
